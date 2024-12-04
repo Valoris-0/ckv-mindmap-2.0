@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            /* Controleer of de afbeelding in dezelfde map staat of pas het pad aan */
+            background-image: url('Foto1.jpg'); /* Als de afbeelding in dezelfde map staat als de HTML-bestand */
+            /* background-image: url('public/assets/Foto1.jpg'); Als de afbeelding in public/assets staat */
+            /* background-image: url('/public/assets/Foto1.jpg'); Als je een server gebruikt en de afbeelding vanaf de root wilt laden */
+            
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        a {
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color .3s;
+        }
+
+        a:hover {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="main-page">
+    <a href="mindmap.html">Naar Mindmap</a>
+
+    <!-- Voeg hier het script toe -->
+    <script src="app.js"></script>
+</body>
+</html>

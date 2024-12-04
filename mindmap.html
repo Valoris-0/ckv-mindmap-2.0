@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Map</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-image: url('/public/assets/Foto2.jpg'); /* Zorg ervoor dat het pad klopt */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            position: relative;
+            flex-direction: column; /* Zorgt ervoor dat de knop bovenaan komt */
+        }
+
+        .button {
+            position: absolute;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .back-button {
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .back-button:hover {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="mindmap-page">
+    <!-- Button to go back to homepage -->
+    <button class="back-button" onclick="goToHomePage()">Back to Home</button>
+
+    <script>
+        // Data voor de knoppen
+        const mindMapButtons = [
+            { description: "This is node 1", label: 'Goeiemorgen' },
+            { description: "This is node 2", label: 'Goeiemorgen' },
+            { description: "This is node 3", label: 'Goeiemorgen' },
+            { description: "This is node 4", label: 'Goeiemorgen' },
+            { description: "This is node 5", label: 'Goeiemorgen' }
+        ];
+
+        // Functie om te controleren of knoppen overlappen
+        function doButtonsOverlap(newX, newY, buttons) {
+            const minDistance = 50; // Minimum afstand tussen knoppen
+            for (let i = 0; i < buttons.length; i++) {
+                const button = buttons[i];
+                const distance = Math.sqrt(Math.pow(newX - button.x, 2) + Math.pow(newY - button.y, 2));
+                if (distance < minDistance) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // Functie om willekeurige posities voor de knoppen te genereren
+        function getRandomPosition() {
+            const margin = 20; // Minimum afstand van de rand van het scherm
+            const maxWidth = window.innerWidth - 100 - margin; // Breedte van het scherm min de grootte van de knop
+            const maxHeight = window.innerHeight - 50 - margin; // Hoogte van het scherm min de grootte van de knop
+            const x = Math.random() * maxWidth + margin;
+            const y = Math.random() * maxHeight + margin;
+
+            return { x, y };
+        }
+
+        // Maak de knoppen aan en zet ze op een willekeurige plek
+        const placedButtons = [];
+        mindMapButtons.forEach((node, index) => {
+            let newPosition = getRandomPosition();
+            // Zorg ervoor dat de knoppen niet overlappen
+            while (doButtonsOverlap(newPosition.x, newPosition.y, placedButtons)) {
+                newPosition = getRandomPosition();
+            }
+
+            const button = document.createElement('button');
+            button.innerText = node.label;
+            button.className = 'button';
+            button.style.left = `${newPosition.x}px`;
+            button.style.top = `${newPosition.y}px`;
+            button.addEventListener('click', () => {
+                alert(node.description);
+            });
+            document.body.appendChild(button);
+            placedButtons.push(newPosition);
+        });
+
+        // Functie om terug naar de homepage te navigeren
+        function goToHomePage() {
+            window.location.href = 'index.html';  // Dit zorgt ervoor dat de gebruiker teruggaat naar index.html
+        }
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>

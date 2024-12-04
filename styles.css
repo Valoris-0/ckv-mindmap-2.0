@@ -1,0 +1,55 @@
+/* Algemene stijl voor beide pagina's */
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Stijl voor de achtergrond op de hoofdpagina */
+.main-page {
+    background-image: url('public/assets/Foto1.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Linkknop naar de mindmap-pagina */
+.main-page a {
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.main-page a:hover {
+    background-color: rgba(43, 43, 43, 0.4);
+}
+
+/* Achtergrondkleur voor de mindmap-pagina */
+.mindmap-page {
+    background-color: #f4f4f4;
+    position: relative;
+}
+
+/* Stijl voor de knoppen op de mindmap */
+.button {
+    position: absolute;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
