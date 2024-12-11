@@ -61,12 +61,17 @@
     <script>
         // Data voor de knoppen
         const mindMapButtons = [
-            { description: "This is node 1", label: 'Goeiemorgen' },
-            { description: "This is node 2", label: 'Goeiemorgen' },
-            { description: "This is node 3", label: 'Goeiemorgen' },
-            { description: "This is node 4", label: 'Goeiemorgen' },
-            { description: "This is node 5", label: 'Goeiemorgen' }
-        ];
+			{ description: "De kraaien cirkelen dreigend boven het veld. Hun gekras klinkt als een roep om aandacht, als een waarschuwing voor wat komen gaat. Ze zijn zowel onheilspellend als onmiskenbaar aanwezig, als de schaduwen van het verleden die het heden achtervolgen.", label: 'Kraaien' },
+			{ description: "Het gouden tarweveld beweegt in de wind, maar het lijkt te ruisen van spanning, alsof het de geheime gedachten van de personages weerspiegelt. Het is een plaats van zowel overvloed als naderende vernietiging. De hoofdrolspelers staan daar, gehuld in de stilte van de natuur, geconfronteerd met hun eigen angsten.", label: 'Tarweveld' },
+			{ description: "De lucht boven het veld is zwaar en donker, als een deken die alles omsluit. De wolken draaien, als een storm die niet alleen het landschap, maar ook de zielen van de personages bedreigt. Het is een metafoor voor de turbulentie die zich afspeelt in de harten van de protagonisten.", label: 'Lucht' },
+			{ description: "De kleuren van het veld – het goud van het tarwe en het diepblauw van de lucht – botsten met elkaar, als de emoties die de personages onderdrukken. Het geel is te fel, het blauw te donker. Het palet roept een gevoel op van strijd tussen het leven en de dood, hoop en wanhoop.", label: 'Kleuren' },
+			{ description: "De scène is scheef, vervormd, alsof de wereld zelf uit balans is. De kijkers zien alles vanuit een verwrongen oogpunt, zoals de personages zelf naar hun situatie kijken: niet langer helder, maar in de war, verdraaid door hun eigen gedachten en keuzes.", label: 'Perspectief' },
+			{ description: "Er heerst een diepe emotie in de lucht: de spanning van onrust, het verdriet van verlies en de angst voor de toekomst. De personages bewegen zich als schaduwen door het veld, gevangen in hun eigen gevoelens, terwijl de lucht om hen heen stormt van onverwerkte verlangens en zorgen.", label: 'Emotie' },
+			{ description: "Te midden van het uitgestrekte veld staan de personages alleen. De leegte van de ruimte benadrukt hun isolement. Ze kunnen elkaar niet vinden, zelfs niet in een wereld vol goud en blauw. De eenzaamheid dringt zich op als een onuitgesproken realiteit, die hen uit elkaar duwt, ook al staan ze fysiek dicht bij elkaar.", label: 'Eenzaamheid' },
+			{ description: "De wind duwt het tarweveld in golven, maar de beweging is chaotisch, alsof alles vastzit in een draaikolk. De personages bewegen zich langzaam door het veld, als marionetten van hun eigen onzekerheden, gevangen in de stromen van het leven die hen niet toelaten om stil te staan.", label: 'Beweging' },
+			{ description: "Er is een onomkeerbaar verlies in de lucht, een verlies van onschuld, van hoop, van de strijd die niet gewonnen kan worden. De personages voelen het, zelfs als ze geen woorden vinden. Het is voelbaar in de stormachtige lucht en het gouden veld dat hen omsluit.", label: 'Verlies' },
+			{ description: "De horizon lijkt eindeloos, maar dreigt ook leeg. Wat voor toekomst ligt er voor de personages? De paden in het veld leiden naar onbekende verten, maar de vraag is of ze willen lopen, of kunnen lopen. De toekomst is onzeker, verborgen achter de wolken die de lucht vullen.", label: 'Toekomst' }
+		];
 
         // Functie om te controleren of knoppen overlappen
         function doButtonsOverlap(newX, newY, buttons) {
