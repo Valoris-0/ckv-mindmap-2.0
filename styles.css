@@ -7,9 +7,6 @@ body {
 
 /* Stijl voor de achtergrond op de hoofdpagina */
 .main-page {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3e/Vincent_van_Gogh_-_Wheatfield_with_Crows_%28F779%29.jpg');
-    background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,9 +30,6 @@ body {
 
 /* Achtergrondkleur voor de mindmap-pagina */
 .mindmap-page {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3e/Vincent_van_Gogh_-_Wheatfield_with_Crows_%28F779%29.jpg');
-    background-size: cover;
-    background-position: center;
     position: relative;
 }
 
