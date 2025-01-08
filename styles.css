@@ -7,7 +7,7 @@ body {
 
 /* Stijl voor de achtergrond op de hoofdpagina */
 .main-page {
-    background-image: url('/Foto1.jpg'); /* Changed from /public/assets/ */
+    background-image: url('/images/Foto1.jpg'); /* Changed from /public/assets/ */
     background-size: cover;
     background-position: center;
     display: flex;
