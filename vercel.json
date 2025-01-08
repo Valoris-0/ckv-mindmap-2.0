@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "*.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/mindmap", "dest": "/mindmap.html" },
+    { "src": "/mindmap.html", "dest": "/mindmap.html" },
+    { "src": "/(.+)", "dest": "/$1" },
+    { "handle": "filesystem" }
+  ]
+}
