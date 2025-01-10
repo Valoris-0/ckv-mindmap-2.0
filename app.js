@@ -24,7 +24,7 @@ if (currentPage === 'main-page') {
     welcomeMessage.style.position = 'absolute';
     welcomeMessage.style.top = '20px';
     welcomeMessage.style.right = '20px';
-    welcomeMessage.style.color = 'white';
+    welcomeMessage.style.color = 'black';
     welcomeMessage.style.fontSize = '18px';
     welcomeMessage.style.fontFamily = 'Arial, sans-serif';
     document.body.appendChild(welcomeMessage);
